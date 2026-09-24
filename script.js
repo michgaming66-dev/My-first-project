@@ -1,3 +1,4 @@
 function showMessage() {
-  alert("My first JavaScript file works!");
+  document.getElementById("main-title").textContent =
+    "You clicked the button 🎉";
 }
