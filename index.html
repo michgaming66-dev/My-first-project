@@ -13,12 +13,13 @@
   <p>
     Type your name below.
   </p>
+<form onsubmit="showMessage(); return false;">
+  <input id="name-input" type="text" placeholder="Enter your name">
 
- <input id="name-input" type="text" placeholder="Enter your name">
-
-<button onclick="showMessage()">
-  Say Hello
-</button>
+  <button type="submit">
+    Say Hello
+  </button>
+</form>
 </div>
 
   <script src="script.js"></script>
