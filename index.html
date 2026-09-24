@@ -8,21 +8,27 @@
 <body>
 
 <div class="card">
-  <h1 id="main-title">Welcome 👋</h1>
 
-  <p>
-    Type your name below.
-  </p>
-<form onsubmit="showMessage(); return false;">
-  <input id="name-input" type="text" placeholder="Enter your name">
+  <h1>My To-Do List 📝</h1>
 
-  <button type="submit">
-    Say Hello
-  </button>
-  <button type="button" onclick="forgetName()">
-  Forget Me
-</button>
-</form>
+  <p>Add something you need to do.</p>
+
+  <form id="todo-form">
+
+    <input
+      id="task-input"
+      type="text"
+      placeholder="Enter a task"
+    >
+
+    <button type="submit">
+      Add Task
+    </button>
+
+  </form>
+
+  <ul id="task-list"></ul>
+
 </div>
 
   <script src="script.js"></script>
