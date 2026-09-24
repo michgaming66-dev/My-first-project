@@ -1,28 +1,21 @@
-function showMessage() {
-  const name = document.getElementById("name-input").value.trim();
+const form = document.getElementById("todo-form");
+const taskInput = document.getElementById("task-input");
+const taskList = document.getElementById("task-list");
 
-  if (name === "") {
-    document.getElementById("main-title").textContent =
-      "Please enter your name";
-  } else {
-    document.getElementById("main-title").textContent =
-      "Hello, " + name + " 👋";
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
 
-    localStorage.setItem("visitorName", name);
+  const task = taskInput.value.trim();
+
+  if (task === "") {
+    return;
   }
-}
 
-const savedName = localStorage.getItem("visitorName");
+  const newTask = document.createElement("li");
 
-if (savedName) {
-  document.getElementById("name-input").value = savedName;
+  newTask.textContent = task;
 
-  document.getElementById("main-title").textContent =
-    "Welcome back, " + savedName + " 👋";
-}
-function forgetName() {
-  localStorage.removeItem("visitorName");
+  taskList.appendChild(newTask);
 
-  document.getElementById("name-input").value = "";
-  document.getElementById("main-title").textContent = "Welcome 👋";
-}
+  taskInput.value = "";
+});
