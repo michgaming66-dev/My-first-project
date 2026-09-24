@@ -26,3 +26,14 @@ localStorage.setItem("tasks", JSON.stringify(tasks));
 
   taskInput.value = "";
 });
+tasks.forEach(function(task) {
+  const newTask = document.createElement("li");
+
+  newTask.textContent = task;
+
+  newTask.addEventListener("click", function() {
+    newTask.remove();
+  });
+
+  taskList.appendChild(newTask);
+});
