@@ -9,3 +9,8 @@ function showMessage() {
       "Hello, " + name + " 👋";
   }
 }
+document.getElementById("name-input").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    showMessage();
+  }
+});
