@@ -20,3 +20,9 @@ if (savedName) {
   document.getElementById("main-title").textContent =
     "Welcome back, " + savedName + " 👋";
 }
+function forgetName() {
+  localStorage.removeItem("visitorName");
+
+  document.getElementById("name-input").value = "";
+  document.getElementById("main-title").textContent = "Welcome 👋";
+}
