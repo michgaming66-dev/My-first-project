@@ -8,9 +8,4 @@ function showMessage() {
     document.getElementById("main-title").textContent =
       "Hello, " + name + " 👋";
   }
-}
-document.getElementById("name-input").addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    showMessage();
-  }
-});
+
