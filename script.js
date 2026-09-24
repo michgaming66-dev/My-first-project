@@ -8,4 +8,4 @@ function showMessage() {
     document.getElementById("main-title").textContent =
       "Hello, " + name + " 👋";
   }
-
+}
